@@ -59,7 +59,7 @@ namespace BoletoNetCore
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0031, 001, 0, boleto.Banco.Beneficiario.ContaBancaria.DigitoConta, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0032, 007, 0, boleto.Banco.Beneficiario.Codigo, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0039, 025, 0, boleto.NumeroControleParticipante, ' ');
-                reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0064, 017, 0, boleto.NossoNumero, '0');
+                reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0064, 017, 0, boleto.BoletoGeraNossoNumero == true ? boleto.NossoNumero : "00000000000000000", '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0081, 002, 0, "0", '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0083, 002, 0, "0", '0');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0085, 003, 0, string.Empty, ' ');

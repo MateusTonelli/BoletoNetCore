@@ -48,6 +48,7 @@ namespace BoletoNetCore
 
         public TipoEspecieDocumento EspecieDocumento { get; set; } = TipoEspecieDocumento.NaoDefinido;
 
+        public bool BoletoGeraNossoNumero { get; set; }
         public string NossoNumero { get; set; } = string.Empty;
         public string NossoNumeroDV { get; set; } = string.Empty;
         public string NossoNumeroFormatado { get; set; } = string.Empty;
